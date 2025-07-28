@@ -29,10 +29,6 @@ primetarde_ai_project/
 │ └── order_formatter.py # Utilities for formatting and displaying orders
 └── README.md # Project documentation
 
-yaml
-Copy
-Edit
-
 ---
 
 ## 🚀 Getting Started
