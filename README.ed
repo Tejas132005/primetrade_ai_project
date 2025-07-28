@@ -39,7 +39,7 @@ A simplified trading bot for the Binance USDT-M Futures Testnet, featuring a com
 
 ## 📂 Project Structure
 
-```bash
+---
 primetarde_ai_project/
 │
 ├── cli.py # Main CLI for user interaction and order entry
@@ -50,7 +50,8 @@ primetarde_ai_project/
 ├── utils/
 │ └── order_formatter.py # Utilities for formatting and displaying orders
 └── README.md # Project documentation
-```
+---
+
 
 ## 🚀 Getting Started
 
