@@ -1,0 +1,47 @@
+[
+    {
+        "symbol": "BTCUSDT",
+        "side": "BUY",
+        "type": "STOP_MARKET",
+        "quantity": 2.0,
+        "price": null,
+        "stopPrice": 2.0,
+        "status": "FILLED",
+        "orderId": 595346,
+        "timestamp": 1753701088137
+    },
+    {
+        "symbol": "BTCUSDT",
+        "side": "BUY",
+        "type": "LIMIT",
+        "quantity": 2.0,
+        "price": 2.0,
+        "stopPrice": null,
+        "status": "FILLED",
+        "orderId": 250589,
+        "timestamp": 1753703063441
+    },
+    {
+        "symbol": "BTCUSDT",
+        "side": "SELL",
+        "type": "STOP_MARKET",
+        "quantity": 2.0,
+        "price": null,
+        "stopPrice": 2.0,
+        "status": "FILLED",
+        "orderId": 819950,
+        "timestamp": 1753703089007
+    },
+    {
+        "symbol": "BTCUSDT",
+        "side": "BUY",
+        "type": "MARKET",
+        "quantity": 2.0,
+        "price": null,
+        "stopPrice": null,
+        "status": "FILLED",
+        "orderId": 244518,
+        "timestamp": 1753704637406,
+        "oco_group_id": null
+    }
+]

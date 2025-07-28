@@ -1,0 +1,169 @@
+# Binance Futures Testnet Trading Bot
+
+A simplified trading bot for the Binance USDT-M Futures Testnet, featuring a command-line interface (CLI) for placing Market, Limit, Stop, and OCO (One Cancels the Other) orders. The bot uses a mock Binance API for safe, simulated trading and includes rich order visualization in the terminal.
+
+---
+
+## ✅ Features
+
+- Place **Market**, **Limit**, **Stop-Limit**, **Stop-Market**, and **OCO** orders on USDT-M Futures (Testnet)
+- Supports both **Buy** and **Sell** operations
+- Grouped OCO order management and display
+- Logs requests and errors for transparency
+- Simple, interactive CLI for order entry
+- Rich, colorized order tables in the terminal (using `rich`)
+- No real funds required—uses a mock Binance API for safe testing
+
+---
+
+## 📂 Project Structure
+
+```
+# Binance Futures Testnet Trading Bot
+
+A simplified trading bot for the Binance USDT-M Futures Testnet, featuring a command-line interface (CLI) for placing Market, Limit, Stop, and OCO (One Cancels the Other) orders. The bot uses a mock Binance API for safe, simulated trading and includes rich order visualization in the terminal.
+
+---
+
+## ✅ Features
+
+- Place **Market**, **Limit**, **Stop-Limit**, **Stop-Market**, and **OCO** orders on USDT-M Futures (Testnet)
+- Supports both **Buy** and **Sell** operations
+- Grouped OCO order management and display
+- Logs requests and errors for transparency
+- Simple, interactive CLI for order entry
+- Rich, colorized order tables in the terminal (using `rich`)
+- No real funds required—uses a mock Binance API for safe testing
+
+---
+
+## 📂 Project Structure
+
+primetarde_ai_project/
+│
+├── cli.py # Main CLI for user interaction and order entry
+├── trading_bot.py # Core trading logic, order placement, OCO handling
+├── mock_binance.py # Mock Binance Futures API (simulates order placement)
+├── orders.json # Stores mock orders for persistence
+├── requirements.txt # Python dependencies
+├── utils/
+│ └── order_formatter.py # Utilities for formatting and displaying orders
+└── README.md # Project documentation
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Tejas132005/primetrade_ai_project.git
+cd primetarde_ai_project
+```
+
+2. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+3. Set up environment variables
+Create a .env file in the project root with your (dummy) Binance API credentials:
+
+```ini
+BINANCE_API_KEY=your_testnet_api_key
+BINANCE_API_SECRET=your_testnet_api_secret
+```
+Note: Real API keys are not required if using the mock API.
+
+---
+
+🔄 Switching from Mock Client to Real Binance Futures Testnet API
+The implementation is modular — you can easily switch from the mock client to the real Binance Futures Testnet API by doing the following:
+
+Replace the mock client in trading_bot.py with the official Binance client:
+
+```python
+from binance.client import Client
+```
+Initialize the client and set the Testnet endpoint:
+
+```python
+self.client = Client(api_key, api_secret)
+self.client.API_URL = "https://testnet.binancefuture.com/fapi/v1"
+```
+Insert your real Binance Futures Testnet API keys in the .env file.
+
+This setup allows you to seamlessly transition from simulation to live testnet trading without major code changes.
+
+---
+
+🛠️ Usage
+Run the CLI:
+
+```bash
+python cli.py
+```
+You will see a menu:
+
+```pgsql
+🎯 Binance Mock Trading CLI
+1️⃣  Place new order
+2️⃣  View all orders
+3️⃣  Exit
+4️⃣  Clear all orders
+```
+Follow prompts to enter symbol, side, order type, quantity, and prices as needed.
+
+---
+
+🧩 Components
+
+**cli.py**
+- Handles user input and validation
+- Loads API keys from .env
+- Instantiates the trading bot and manages the main loop
+- Displays orders using rich tables
+
+**trading_bot.py**
+- Contains the BasicBot class
+- Handles order placement logic, including OCO group management
+- Interacts with the mock Binance client or real Binance Futures Testnet API (if switched)
+
+**mock_binance.py**
+- Simulates Binance Futures API endpoints
+- Stores and loads orders from orders.json
+- Supports OCO group IDs for linked orders
+
+**utils/order_formatter.py**
+- Provides functions to format and print orders and OCO groups using the rich library
+- Displays orders in visually appealing tables with color-coded sides and statuses
+
+---
+
+📦 Dependencies
+- python-dotenv — for loading environment variables from .env
+- binance — Binance API Python client (optional for mock)
+- rich — for beautiful terminal tables and formatting
+
+Install all dependencies with:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+📝 Notes
+- No real trades are executed when using the mock client; all operations are simulated.
+- You can switch to real Binance Futures Testnet by following the instructions above.
+- The bot is designed for educational and prototyping purposes.
+- You can inspect orders.json to see all simulated orders.
+
+---
+
+📜 License
+MIT License
+
+Feel free to contribute, report issues, or suggest features!
+---
