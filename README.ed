@@ -39,18 +39,18 @@ A simplified trading bot for the Binance USDT-M Futures Testnet, featuring a com
 
 ## 📂 Project Structure
 
+```bash
 primetarde_ai_project/
-    -│
-    -├── cli.py # Main CLI for user interaction and order entry
-    -├── trading_bot.py # Core trading logic, order placement, OCO handling
-    -├── mock_binance.py # Mock Binance Futures API (simulates order placement)
-    -├── orders.json # Stores mock orders for persistence
-    -├── requirements.txt # Python dependencies
-    -├── utils/
-    -│ └── order_formatter.py # Utilities for formatting and displaying orders
-    -└── README.md # Project documentation
-
----
+│
+├── cli.py # Main CLI for user interaction and order entry
+├── trading_bot.py # Core trading logic, order placement, OCO handling
+├── mock_binance.py # Mock Binance Futures API (simulates order placement)
+├── orders.json # Stores mock orders for persistence
+├── requirements.txt # Python dependencies
+├── utils/
+│ └── order_formatter.py # Utilities for formatting and displaying orders
+└── README.md # Project documentation
+```
 
 ## 🚀 Getting Started
 
